@@ -1,7 +1,15 @@
-import '../styles/globals.css'
+import '../styles/globals.css';
+import { CSSReset, ThemeProvider } from '@chakra-ui/core';
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+	return (
+		<>
+			<ThemeProvider>
+				<CSSReset />
+				<Component {...pageProps} />
+			</ThemeProvider>
+		</>
+	);
 }
 
-export default MyApp
+export default MyApp;
