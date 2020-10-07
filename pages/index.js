@@ -14,7 +14,9 @@ export default function Home() {
 		console.log('Search Limit - ', searchLimit);
 		axios
 			.get(
-				'https://api.giphy.com/v1/gifs/search?api_key=Z4U4HihLTc85Glp44AsE3xNsgVlsr0aL&q=' +
+				'https://api.giphy.com/v1/gifs/search?api_key=' +
+					process.env.NEXT_APP_API_KEY +
+					'&q=' +
 					searchTerm +
 					'&limit=' +
 					searchLimit +
