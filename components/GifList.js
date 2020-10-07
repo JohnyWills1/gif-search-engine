@@ -1,5 +1,6 @@
 import React from 'react';
 import GifItem from './GifItem';
+import { Flex } from '@chakra-ui/core';
 
 export const GifList = ({ gifs }) => {
 	const gifItems = gifs.map((image) => {
@@ -8,7 +9,9 @@ export const GifList = ({ gifs }) => {
 
 	return (
 		<>
-			<ul>{gifItems}</ul>
+			<Flex flexWrap='wrap' align='center' justify='center'>
+				{gifItems}
+			</Flex>
 		</>
 	);
 };

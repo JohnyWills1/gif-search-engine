@@ -1,11 +1,12 @@
-import React from "react";
+import React from 'react';
+import { Box } from '@chakra-ui/core';
 
 export default function GifItem({ gif }) {
 	return (
 		<>
-			<li style={{ padding: "2px", float: "left" }}>
+			<Box style={{ padding: '2px' }}>
 				<img src={gif.images.downsized.url} width='300' height='300' />
-			</li>
+			</Box>
 		</>
 	);
 }
